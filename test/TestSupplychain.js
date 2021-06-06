@@ -10,10 +10,10 @@ contract('SupplyChain', function(accounts) {
     var upc = 1
     const ownerID = accounts[0]
     const originFarmerID = accounts[1]
-    const originFarmName = "Sbrilly Hey"
-    const originFarmInformation = "Albanian Valley"
-    const originFarmLatitude = "-10.456987"
-    const originFarmLongitude = "120.125679"
+    const originFarmName = "John Doe"
+    const originFarmInformation = "Yarray Valley"
+    const originFarmLatitude = "-38.239770"
+    const originFarmLongitude = "144.341490"
     var productID = sku + upc
     const productNotes = "Best beans for Caffee"
     const productPrice = web3.utils.toWei("1", "ether")
@@ -243,9 +243,9 @@ contract('SupplyChain', function(accounts) {
         assert.equal(BufferTwo[2], productID, 'Error: productID')
         assert.equal(BufferTwo[3], productNotes, 'Error: originFarmerID')
         assert.equal(BufferTwo[4], productPrice, 'Error: originFarmName')
-        assert.equal(BufferTwo[5], 7, 'Error: originFarmInformation') // Purchased
+        assert.equal(BufferTwo[5], 7, 'Error: originFarmInformation')
         assert.equal(BufferTwo[6], distributorID, 'Error: originFarmLatitude')
         assert.equal(BufferTwo[7], retailerID, 'Error: originFarmLongitude')
-        assert.equal(BufferTwo[8], consumerID, 'Error: item State') // Purchased
+        assert.equal(BufferTwo[8], consumerID, 'Error: item State')
     })
 });
